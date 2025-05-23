@@ -125,6 +125,16 @@ nav ul li a:hover {
     gap: 50px;
 }
 
+.about-2 {
+    margin-top: 60px;
+}
+
+.about-2 .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
 .about-img {
     flex: 1;
 }
@@ -204,10 +214,15 @@ nav ul li a:hover {
 }
 
 /* Testimonials */
-.section-title{
+.section-title h2{
     font-size: 2.2rem;
     margin-bottom: 50px;
     color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-title{
+    text-align: center;
 }
 
 .testimonials {
@@ -312,6 +327,10 @@ footer p {
 @media (max-width: 768px) {
     nav {
         display: none;
+    }
+
+    .about-2 .container {
+    flex-direction: column-reverse;    
     }
 
     .menu-mobile {
