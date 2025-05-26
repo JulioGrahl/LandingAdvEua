@@ -20,7 +20,7 @@ body {
 
 .btn {
     display: inline-block;
-    background: #2c3e50;
+    background: #00305c;
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -29,12 +29,12 @@ body {
 }
 
 .btn:hover {
-    background: #1a252f;
+    background: #bc9c22;
 }
 
 .btn-outline {
-    border: 2px solid #2c3e50;
-    color: #2c3e50;
+    border: 2px solid #00305c;
+    color: #00305c;
     background: transparent;
 }
 
@@ -54,14 +54,8 @@ header .container {
     align-items: center;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-}
-
-.logo p {
-    font-size: 0.9rem;
-    color: #7f8c8d;
+.logo img{
+    max-width: 300px;
 }
 
 nav ul {
@@ -70,7 +64,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #2c3e50;
+    color: #00305c;
     text-decoration: none;
     margin-left: 30px;
     font-weight: 600;
@@ -78,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e74c3c;
+    color: #bc9c22;
 }
 
 .menu-mobile {
@@ -106,7 +100,7 @@ nav ul li a:hover {
 }
 
 .hero h1 span {
-    color: #e74c3c;
+    color: #bc9c22;
 }
 
 .hero p {
@@ -162,7 +156,7 @@ nav ul li a:hover {
 .about-text h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #00305c;
 }
 
 .about-text p {
@@ -180,7 +174,7 @@ nav ul li a:hover {
 .areas h2 {
     font-size: 2.2rem;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: #00305c;
 }
 
 .areas-grid {
@@ -203,21 +197,21 @@ nav ul li a:hover {
 
 .area-card i {
     font-size: 3rem;
-    color: #e74c3c;
+    color: #bc9c22;
     margin-bottom: 20px;
 }
 
 .area-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: #00305c;
 }
 
 /* Testimonials */
 .section-title h2{
     font-size: 2.2rem;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: #00305c;
     margin-bottom: 10px;
 }
 
@@ -245,7 +239,7 @@ nav ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 20px;
-    border: 3px solid #e74c3c;
+    border: 3px solid #bc9c22;
 }
 
 .testimonial-item p {
@@ -307,13 +301,13 @@ nav ul li a:hover {
 }
 
 .contact-info i {
-    color: #e74c3c;
+    color: #bc9c22;
     font-size: 1.2rem;
 }
 
 /* Footer */
 footer {
-    background: #2c3e50;
+    background: #00305c;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -333,8 +327,19 @@ footer p {
     flex-direction: column-reverse;    
     }
 
+    .logo img{
+        max-width: 250px;
+    }
+    
+    header .container{
+        margin: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
     .menu-mobile {
-        display: block;
+        display: none;
     }
 
     .about .container,
