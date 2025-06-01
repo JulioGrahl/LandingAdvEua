@@ -38,14 +38,69 @@ body {
     background: transparent;
 }
 
+/* ===== TOP BAR ===== */
+.top-bar {
+    background-color: #00305c;
+    color: var(--light);
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+    color: var(--primary);
+
+}
+
+.contact-info{
+    color: white;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #bc9c22;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.social-links i{
+    color: white;
+}
+
+.social-links a:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
 /* Header */
 header {
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 80px;
     background: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: sticky;
+    display: flex;
     width: 100%;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 0px;
 }
 
 header .container {
@@ -82,11 +137,15 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+#home{
+    padding: 0px;
+}
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(242, 241, 241, 0.1)), url('Imagens/imagem\ fundo.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 550px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -174,7 +233,7 @@ nav ul li a:hover {
 .areas h2 {
     font-size: 2.2rem;
     margin-bottom: 50px;
-    color: #00305c;
+    color: #bc9c22;
 }
 
 .areas-grid {
@@ -184,7 +243,7 @@ nav ul li a:hover {
 }
 
 .area-card {
-    background: white;
+    background: #00305c;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -197,14 +256,18 @@ nav ul li a:hover {
 
 .area-card i {
     font-size: 3rem;
-    color: #bc9c22;
+    color: white;
     margin-bottom: 20px;
 }
 
 .area-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #00305c;
+    color: #bc9c22;
+}
+
+.area-card p {
+    color: white;
 }
 
 /* Testimonials */
@@ -344,10 +407,60 @@ footer p {
     height: 50px;
 }
 
+/* ===== CTA DELIVERY ===== */
+.cta-delivery {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://ultimatum.com.br/wp-content/uploads/2025/02/blog-marketing-juridico.jpeg') no-repeat center center/cover;
+    padding: 80px 0;
+    color: var(--light);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: white;
+;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.delivery-apps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.delivery-app {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: var(--light);
+    color: var(--secondary);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.delivery-apps i{
+    color: white;
+    margin-right: 8px;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
     nav {
+        display: none;
+    }
+
+    .top-bar{
         display: none;
     }
 
