@@ -68,6 +68,7 @@ class Carrossel {
 
     getVisibleCards() {
         const width = window.innerWidth;
+        
         if (width < 768) return 1;
         if (width < 992) return 2;
         return 3;
