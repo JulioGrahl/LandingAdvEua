@@ -274,6 +274,10 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
+#area:hover {
+    transform: none;
+}
+
 .carrossel-track .area-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -416,6 +420,11 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
+}
+
+.area-card a{
+    color: #bc9c22;
+    text-decoration: none;;
 }
 
 .area-card:hover {

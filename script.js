@@ -22,8 +22,26 @@ class Carrossel {
         this.btnPrev.addEventListener('click', () => this.move(-1));
         this.btnNext.addEventListener('click', () => this.move(1));
         
-        // Touch events
+        // Touch events - Versão melhorada para funcionar em todos os cards
         let startX, moveX;
+
+        // Adiciona os eventos de toque a cada card individualmente
+        this.cards.forEach(card => {
+            card.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                this.track.style.transition = 'none';
+            }, { passive: true });
+
+            card.addEventListener('touchend', (e) => {
+                moveX = e.changedTouches[0].clientX;
+                if (Math.abs(startX - moveX) > 50) {
+                    startX > moveX ? this.move(1) : this.move(-1);
+                }
+                this.track.style.transition = 'transform 0.5s ease';
+            }, { passive: true });
+        });
+
+        // Mantém também os eventos no track como fallback
         this.track.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
             this.track.style.transition = 'none';
