@@ -223,6 +223,174 @@ nav ul li a:hover {
     font-size: 1.1rem;
 }
 
+/* ===== ESTILOS GERAIS ===== */
+.carrossel-cards {
+  padding: 80px 0;
+  background: #f9f9f9;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.carrossel-cards h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #bc9c22;
+}
+
+/* ===== ESTRUTURA DO CARROSSEL ===== */
+.carrossel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 50px; /* Espaço para os botões */
+}
+
+.carrossel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrossel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+  padding: 5px 0; /* Compensa o hover */
+}
+
+/* ===== CARDS ===== */
+.carrossel-track .area-card {
+  flex: 0 0 calc(33.333% - 30px); /* 3 cards por linha */
+  margin: 0 15px;
+  background: #00305c;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.carrossel-track .area-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones */
+.carrossel-track .area-card i {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Textos */
+.carrossel-track .area-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #bc9c22;
+}
+
+.carrossel-track .area-card p {
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 48, 92, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.carrossel-btn:hover {
+  background: #bc9c22;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carrossel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+.carrossel-btn.anterior {
+  left: 0;
+}
+
+.carrossel-btn.proximo {
+  right: 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1199px) {
+  .carrossel-track .area-card {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .carrossel-track .area-card {
+    flex: 0 0 calc(50% - 20px); /* 2 cards por linha */
+  }
+  
+  .carrossel-wrapper {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carrossel-track .area-card {
+    flex: 0 0 calc(100% - 20px); /* 1 card por linha */
+  }
+  
+  .carrossel-cards {
+    padding: 60px 0;
+  }
+  
+  .carrossel-cards h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .carrossel-track .area-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .carrossel-wrapper {
+    padding: 0 30px;
+  }
+  
+  .carrossel-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* ===== GARANTIA DE TAMANHO CONSISTENTE ===== */
+.carrossel-track .area-card {
+  min-width: 0; /* Resolve problemas de flexbox */
+  word-wrap: break-word;
+}
+
 /* Áreas de Atuação */
 .areas {
     padding: 80px 0;
