@@ -208,6 +208,16 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.about-img-2-2 img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-img-2-2{
+    flex: 1;
+}
+
 .about-text {
     flex: 1;
 }
@@ -240,7 +250,7 @@ nav ul li a:hover {
 .carrossel-cards h2 {
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #bc9c22;
+  color: #00305c;
 }
 
 /* ===== ESTRUTURA DO CARROSSEL ===== */
@@ -266,10 +276,11 @@ nav ul li a:hover {
 .carrossel-track .area-card {
   flex: 0 0 calc(33.333% - 30px); /* 3 cards por linha */
   margin: 0 15px;
-  background: #00305c;
+  background: #00305c0d;
+  border: 1px solid #bc9c22;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px  #bc9d2265;
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
@@ -286,7 +297,7 @@ nav ul li a:hover {
 /* Ícones */
 .carrossel-track .area-card i {
   font-size: 3rem;
-  color: white;
+  color: #00305c;
   margin-bottom: 20px;
   display: block;
 }
@@ -405,7 +416,7 @@ nav ul li a:hover {
 .areas h2 {
     font-size: 2.2rem;
     margin-bottom: 50px;
-    color: #bc9c22;
+    color: #00305c;
 }
 
 .areas-grid {
@@ -423,8 +434,11 @@ nav ul li a:hover {
 }
 
 .area-card a{
-    color: #bc9c22;
-    text-decoration: none;;
+    color: white;
+    background-color: #00305c;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .area-card:hover {
@@ -638,6 +652,10 @@ footer p {
     }
 
     .top-bar{
+        display: none;
+    }
+
+    .about-img-2-2 img{
         display: none;
     }
 
