@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
 /* Reset e Estilos Gerais */
 * {
     margin: 0;
@@ -165,6 +167,20 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+}
+
+.logoHero{
+    max-width: 100px;
+}
+
+.h1Hero, .h1Hero span{
+    font-family: 'League Gothic';
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+.h1Hero span{
+    margin-top: -10px;
 }
 
 /* Sobre */
