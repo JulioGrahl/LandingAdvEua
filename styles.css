@@ -663,6 +663,18 @@ footer p {
 
 /* Responsivo */
 @media (max-width: 768px) {
+    .logoHero{
+        max-width: 70px;
+    }
+
+    .h1Hero span, .container .h1Hero{
+        font-size: 20px;
+    }
+
+    .container p{
+        font-size: 15px;
+    }
+
     nav {
         display: none;
     }
