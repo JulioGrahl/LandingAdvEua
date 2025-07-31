@@ -292,9 +292,11 @@ nav ul li a:hover {
 .carrossel-track .area-card {
   flex: 0 0 calc(33.333% - 30px); /* 3 cards por linha */
   margin: 0 15px;
+  background: #ffffff;
   background: white;
   padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 2px 10px  #1a1a1a31;
   box-shadow: 0 2px 10px  #71717165;
   transition: all 0.3s ease;
   box-sizing: border-box;
