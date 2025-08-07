@@ -125,6 +125,11 @@ header .container {
     max-width: 300px;
 }
 
+.logo{
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
 nav ul {
     display: flex;
     list-style: none;
