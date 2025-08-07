@@ -94,3 +94,113 @@ class Carrossel {
 document.addEventListener('DOMContentLoaded', () => {
     new Carrossel(document.querySelector('.carrossel-container'));
 });
+
+// Animação de contagem dos números - Versão melhorada
+const statNumbers = document.querySelectorAll('.stat-number');
+
+function animateNumbers() {
+    statNumbers.forEach(number => {
+        const target = +number.getAttribute('data-count');
+        const duration = 3000; // 2 segundos para completar a animação
+        const startTime = performance.now();
+        const startValue = 0;
+        const easeOutQuad = t => t * (2 - t); // Função de easing para suavizar
+
+        function updateCount(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress = easeOutQuad(progress);
+            const currentValue = Math.floor(startValue + (target - startValue) * easedProgress);
+            
+            // Formatação com separadores de milhar (opcional)
+            number.textContent = currentValue.toLocaleString();
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCount);
+            } else {
+                number.textContent = target.toLocaleString();
+            }
+        }
+
+        requestAnimationFrame(updateCount);
+    });
+}
+
+// Observador de interseção para disparar a animação quando o elemento estiver visível
+const statsSection = document.querySelector('.stats-section');
+const observerOptions = {
+    threshold: 0.5 // Dispara quando 50% do elemento estiver visível
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateNumbers();
+            observer.unobserve(entry.target); // Para a observação após disparar
+        }
+    });
+}, observerOptions);
+
+if (statsSection) {
+    observer.observe(statsSection);
+}
+    
+    // Ativar animação quando a seção estiver visível
+    function checkStatsVisibility() {
+        const statsSection = document.querySelector('.stats-section');
+        const statsPosition = statsSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (statsPosition < screenPosition) {
+            animateNumbers();
+            window.removeEventListener('scroll', checkStatsVisibility);
+        }
+    }
+    
+    window.addEventListener('scroll', checkStatsVisibility);
+    
+    
+    
+    // Animação de revelação ao scroll
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    
+    function checkFadeElements() {
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.classList.add('fade-in-up');
+            }
+        });
+    }
+    
+    // Verificar elementos na carga inicial
+    checkFadeElements();
+    
+    // Verificar elementos durante o scroll
+    window.addEventListener('scroll', checkFadeElements);
+    
+    // Atualizar ano no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    
+    // Efeito de digitação no título do hero
+    const heroTitleLines = document.querySelectorAll('.title-line');
+    
+    heroTitleLines.forEach((line, index) => {
+        const text = line.textContent;
+        line.textContent = '';
+        
+        setTimeout(() => {
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    line.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, 100);
+        }, index * 1000);
+    });
