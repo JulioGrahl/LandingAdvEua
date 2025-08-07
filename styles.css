@@ -13,6 +13,7 @@ body {
     color: #333;
 }
 
+
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
@@ -135,6 +136,7 @@ nav ul li a {
     margin-left: 30px;
     font-weight: 600;
     transition: 0.3s;
+    font-family: 'Playfair Display', serif;
 }
 
 nav ul li a:hover {
@@ -165,7 +167,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -183,9 +185,8 @@ nav ul li a:hover {
 }
 
 .h1Hero, .h1Hero span{
-    font-family: 'League Gothic';
-    letter-spacing: 3px;
-    font-weight: lighter;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
 }
 
 .h1Hero span{
@@ -609,6 +610,7 @@ nav ul li a:hover {
     background-color: #00305c;
 }
 
+
 .area-card:hover .area-hover {
     bottom: 0;
     opacity: 1;
@@ -835,11 +837,11 @@ footer p {
     }
 
     .h1Hero span, .container .h1Hero{
-        font-size: 20px;
+        font-size: 27px;
     }
 
     .container p{
-        font-size: 15px;
+        font-size: 16px;
     }
 
     nav {
@@ -859,14 +861,18 @@ footer p {
     }
 
     .logo img{
-        max-width: 250px;
+        max-width: 200px;
     }
-    
+
     header .container{
         margin: none;
         padding: 0;
         display: flex;
         justify-content: center;
+    }
+
+    header{
+        height: 50px;
     }
 
     .menu-mobile {
