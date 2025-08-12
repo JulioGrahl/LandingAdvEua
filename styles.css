@@ -867,6 +867,7 @@ footer p {
 
     .logo img{
         max-width: 200px;
+        margin-top: 10px;
     }
 
     header .container{
@@ -877,7 +878,7 @@ footer p {
     }
 
     header{
-        height: 50px;
+        height: 60px;
     }
 
     .menu-mobile {
